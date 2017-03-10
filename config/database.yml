@@ -17,6 +17,12 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  database: rails-pgsql-persistent
+  host: http://postgresql-rubyshift-r1.44fs.preview.openshiftapps.com
+  port: 5432
+  username: dXNlcjIxQQ==
+  password: eDdzTlNYajE=
+
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
@@ -80,6 +86,3 @@ test:
 #
 production:
   <<: *default
-  database: Web_production
-  username: Web
-  password: <%= ENV['WEB_DATABASE_PASSWORD'] %>
